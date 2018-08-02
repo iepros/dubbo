@@ -13,6 +13,9 @@
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
 	<dubbo:consumer timeout="5000" />
-	<dubbo:reference id="userService"
-                     interface="com.xfma.service.IUserService" />
+	<!-- <dubbo:reference id="userService"
+                     interface="com.xfma.service.IUserService" /> -->
+                     
+     <!-- 采用注解方式 -->
+     <dubbo:annotation package="com.xfma.dubbo"></dubbo:annotation>
 </beans>
